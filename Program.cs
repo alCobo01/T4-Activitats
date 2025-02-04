@@ -8,17 +8,28 @@ namespace T4Activitats
     {
         public static void Main()
         {
-            List<int> list = [5, 10, 15, 20, 25];
+            const string StudentMessage = "\n Please, write the name of the student: ";
 
-            list.Add(42);
+            Dictionary<string, int> students = new Dictionary<string, int>();
 
-            list.Insert(0, 7);
+            students.Add("Marc", 21);
+            students.Add("Laura", 19);
+            students.Add("Pau", 22);
 
-            list.Remove(15);
+            MyUtils.Display(students);
 
-            list = list.OrderByDescending(x => x).ToList();
+            Console.Write(StudentMessage);
+            string student = MyUtils.ReadString();
+            if (students.ContainsKey(student))
+            {
+                //Accedeix al valor de la key de la variable "student"
+                Console.WriteLine($"{student} is {students[student]} years old");
+            }
+            Console.WriteLine();
 
-            MyUtils.DisplayEven(list);
+            students.Remove("Laura");
+
+            MyUtils.Display(students);
         }
     }
 }

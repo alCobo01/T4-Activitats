@@ -45,6 +45,14 @@ namespace T4Activitats
             }
         }
 
+        public static void Display(Dictionary<string, int> dictionary)
+        {
+            foreach (KeyValuePair<string, int> item in dictionary)
+            {
+                Console.WriteLine($"{item.Key} is {item.Value} years old");
+            }
+        }
+
         public static void DisplayEven(List<int> list)
         {
             foreach (int item in list)
