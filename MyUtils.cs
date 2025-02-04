@@ -45,6 +45,14 @@ namespace T4Activitats
             }
         }
 
+        public static void DisplayEven(List<int> list)
+        {
+            foreach (int item in list)
+            {
+                if (item % 2 == 0) Console.WriteLine(item);
+            }
+        }
+
         public static void FindString(ArrayList list, string str)
         {
             const string stringFoundMessage = "{0} is in the list";
