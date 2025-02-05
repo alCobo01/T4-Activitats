@@ -7,7 +7,8 @@ namespace T4Activitats
     {
         public static void Main()
         {
-           
+            DateTime date = DateTime.Today;
+            Console.WriteLine("Today is " + date.DayOfWeek);
         }
     }
 }
