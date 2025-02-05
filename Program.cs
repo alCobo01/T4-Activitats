@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Globalization;
 using System.Linq;
 
 namespace T4Activitats
@@ -8,28 +9,22 @@ namespace T4Activitats
     {
         public static void Main()
         {
-            const string StudentMessage = "\n Please, write the name of the student: ";
+            const string IsPosteriorMessage = "La primera data és posterior a la segona",
+                IsNotPosteriorMessage = "La primera data no és posterior a la segona";
 
-            Dictionary<string, int> students = new Dictionary<string, int>();
+            bool isPosterior;
+            DateTime[] dates = new DateTime[2];
 
-            students.Add("Marc", 21);
-            students.Add("Laura", 19);
-            students.Add("Pau", 22);
-
-            MyUtils.Display(students);
-
-            Console.Write(StudentMessage);
-            string student = MyUtils.ReadString();
-            if (students.ContainsKey(student))
+            for (int i = 0; i < 2; i++)
             {
-                //Accedeix al valor de la key de la variable "student"
-                Console.WriteLine($"{student} is {students[student]} years old");
+                dates[i] = DateUtils.GetValidDate();
             }
-            Console.WriteLine();
 
-            students.Remove("Laura");
+            isPosterior = DateUtils.IsPosterior(dates[0], dates[1]);
 
-            MyUtils.Display(students);
+            Console.WriteLine(isPosterior ? IsPosteriorMessage : IsNotPosteriorMessage);
         }
+
+        
     }
 }
