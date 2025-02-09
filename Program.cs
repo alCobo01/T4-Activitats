@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace T4Activitats
 {
@@ -7,7 +8,15 @@ namespace T4Activitats
     {
         public static void Main()
         {
-            List<int> ints = new List<int> { 1, 2, 3, 4, 5 };
+            const int MAX = 3;
+
+            List<int> list = new List<int> { 1, 2, 3, 4, 5 };
+            list.RemoveAll(n => n > MAX);
+
+            foreach (int n in list)
+            {
+                Console.WriteLine(n);
+            }
         }
     }
 }
