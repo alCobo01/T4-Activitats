@@ -18,7 +18,6 @@ namespace T4Activitats
                 Console.Write(DatePromptMessage);
                 string input = MyUtils.ReadString();
 
-                //Hem de pasar-li informació sobre la cultura (god knows que significa ??)
                 dataValida = DateTime.TryParseExact(input, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out dataObjectiu);
 
                 if (!dataValida)
@@ -32,7 +31,7 @@ namespace T4Activitats
 
         public static bool IsPosterior(DateTime dateOne, DateTime dateTwo)
         {
-            return dateOne < dateTwo;
+            return dateOne > dateTwo;
         }
     }
 }
