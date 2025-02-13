@@ -10,7 +10,10 @@ namespace T4Activitats
             string[] arrayStrings = ["hola", "adeu", "bon dia", "bona nit"];
             List<string> listStrings = arrayStrings.ToList();
 
-            foreach (string item in listStrings) { Console.WriteLine(item); }
+            //MAL suspenso -_-
+            //foreach (string item in listStrings) { Console.WriteLine(item); }
+
+            listStrings.ForEach(item => Console.WriteLine(item));
         }
     }
 }
