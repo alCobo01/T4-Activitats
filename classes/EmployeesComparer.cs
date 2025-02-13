@@ -10,7 +10,7 @@ namespace T4Activitats
             if (x == null || y == null) return 0;
             if (x == null) return 1;
             if (y == null) return -1;
-            return x.Seniority().CompareTo(y.Seniority());
+            return x.GetSeniority().CompareTo(y.GetSeniority());
         }
     }
 }

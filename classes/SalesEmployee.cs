@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace T4Activitats
 {
@@ -13,20 +14,10 @@ namespace T4Activitats
 
         public override string ToString()
         {
-            return $@"
-            Sales Employee
-            ------------------------------
-            Code:        {Code}
-            Name:        {Name}
-            Surname:     {Surname}
-            BirthDate:   {BirthDate.ToShortDateString()}
-            HireDate:    {HireDate.ToShortDateString()}
-            MonthSalary: {MonthSalary}
-            Payments:    {Payments}
-            Age:         {GetAge()}
-            Seniority:   {Seniority()}
-            AnnualSalary:{AnnualSalary()}
-            ";
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine(base.ToString());
+            sb.AppendLine($"Comssion: {Comssion}");
+            return sb.ToString();
         }
     }
 }
