@@ -8,7 +8,8 @@ namespace T4Activitats
            
         public static void Main()
         {
-           
+            Func<int, int, int> suma = (x, y) => x + y;
+            Console.WriteLine(suma(2, 3));
         }
     }
 }
