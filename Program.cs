@@ -8,7 +8,7 @@ namespace T4Activitats
     {
         public static void Main()
         {
-            string path = Path.GetFullPath(@"..\..\..\files\studentsç.csv");
+            string path = Path.GetFullPath(@"..\..\..\files\students.csv");
 
             using var reader = new StreamReader(path);
             using var csv = new CsvReader(reader, CultureInfo.InvariantCulture);
