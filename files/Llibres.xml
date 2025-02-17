@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Llibres>
+  <Llibre>
+    <Any>1999</Any>
+    <Titol>Harry Potter</Titol>
+    <Autor>J.K. Rowling</Autor>
+  </Llibre>
+  <Llibre>
+    <Any>2003</Any>
+    <Titol>El Codigo Da Vinci</Titol>
+    <Autor>Dan Brown</Autor>
+  </Llibre>
+  <Llibre>
+    <Any>2010</Any>
+    <Titol>Los juegos del hambre</Titol>
+    <Autor>Suzanne Collins</Autor>
+  </Llibre>
+  <Llibre>
+    <Any>2012</Any>
+    <Titol>50 sombras de Grey</Titol>
+    <Autor>E.L. James</Autor>
+  </Llibre>
+</Llibres>
