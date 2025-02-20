@@ -5,16 +5,16 @@ namespace T4Activitats
 {
     public class Program
     {
-        public static void ExecutarAmbMetodeAnonim(Action message) {
-            message();
+        public delegate void Notificacio(string missatge);
+        public static void ExecutarAmbMetodeAnonim(Notificacio message) {
+            message("Bona tarda");
         }
             
-
         public static void Main()
         {
-            ExecutarAmbMetodeAnonim(delegate
+            ExecutarAmbMetodeAnonim(delegate (string missatge)
             {
-                Console.WriteLine("Hola món!");
+                Console.WriteLine(missatge);
             });
         }
     }
