@@ -5,12 +5,16 @@ namespace T4Activitats
 {
     public class Program
     {
-        public delegate double Operacio(int a, int b); 
+        public delegate void Operacio(int a, int b); 
 
         public static void Main()
         {
-            Operacio op = (a, b) => Math.Pow(a, b);
-            Console.WriteLine(op(2, 3));
+            Operacio metodeAnonim = delegate (int a, int b)
+            {
+                Console.WriteLine(Math.Pow(a, b));
+            };
+
+            metodeAnonim(2, 3);
         }
     }
 }
