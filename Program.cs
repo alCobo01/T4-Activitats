@@ -12,9 +12,10 @@ namespace T4Activitats
         public static int Dividir(int a, int b) => a / b;
         public static void Main()
         {
-           Operacio operacio = Multiplicar;
-           int resultat = ExecutaOperacio(operacio, 5, 3);
-           int resultatDos = ExecutaOperacio(Dividir, 10, 2);
+           Operacio multi = Multiplicar;
+           Operacio divi = Dividir;
+           Console.WriteLine(ExecutaOperacio(multi, 5, 3));
+           Console.WriteLine(ExecutaOperacio(divi, 10, 2));
         }
     }
 }
