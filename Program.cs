@@ -8,7 +8,7 @@ namespace T4Activitats
     {
         public static void Main()
         {
-            const string Message = "Fitxer creat correctament! Es consultar veure a {0}";
+            const string Message = "Fitxer creat correctament! Es pot consultar a {0}";
 
             string path = Path.GetFullPath(@"..\..\..\files\Llibres.xml");
             System.IO.Directory.CreateDirectory(@"..\..\..\files\");
